@@ -3,10 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Антонио Родригес-Яновицкий">
   <title>Антонио</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2312110f'/%3E%3Crect x='13' y='4' width='6' height='24' fill='%23d64a32'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,360;0,9..144,500;1,9..144,360&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #12110f;
+      --ink: #f3ece1;
+      --mute: #8f877c;
+      --mark: #d64a32;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Outfit, "Segoe UI", sans-serif;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: clamp(1.25rem, 4vw, 3rem);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.22;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .sheet {
+      position: relative;
+      width: max-content;
+      max-width: 100%;
+      padding: clamp(1.8rem, 4.5vw, 2.9rem) clamp(1.8rem, 5vw, 3.4rem);
+      border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+    }
+
+    main {
+      position: relative;
+      width: 100%;
+      max-width: 34rem;
+      padding-left: 1.5rem;
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.15em;
+      bottom: 0.15em;
+      width: 3px;
+      background: var(--mark);
+    }
+
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--mute);
+      font-weight: 500;
+    }
+
+    h1 {
+      font-family: Fraunces, "Iowan Old Style", "Palatino Linotype", serif;
+      font-optical-sizing: auto;
+      font-weight: 360;
+      font-size: clamp(3.6rem, 11vw, 7rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin: 0.45rem 0 0.15rem;
+    }
+
+    .family {
+      display: block;
+      font-family: Fraunces, serif;
+      font-style: italic;
+      font-weight: 360;
+      font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+      letter-spacing: 0;
+      color: var(--mute);
+      margin: 0.55rem 0 1.35rem;
+    }
+
+    .meta {
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      color: var(--mute);
+      margin-bottom: 1.45rem;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      background-image: linear-gradient(var(--mark), var(--mark));
+      background-size: 0 1px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.25s ease, color 0.2s ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--mark);
+      background-size: 100% 1px;
+      outline: none;
+    }
+
+    ::selection {
+      background: var(--mark);
+      color: var(--ink);
+    }
+  </style>
 </head>
 <body>
-  <p>Антонио</p>
-  <p><a href="mailto:axtonio.code@gmail.com">axtonio.code@gmail.com</a></p>
+  <div class="sheet">
+    <main>
+      <p class="label">axtonio</p>
+      <h1>Антонио</h1>
+      <p class="family">Родригес-Яновицкий</p>
+      <p class="meta">МФТИ · SberDevice</p>
+      <p><a href="mailto:axtonio.code@gmail.com">axtonio.code@gmail.com</a></p>
+    </main>
+  </div>
 </body>
 </html>
